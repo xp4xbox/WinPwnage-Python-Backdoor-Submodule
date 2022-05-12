@@ -1,0 +1,2 @@
+class WinPwnageError(Exception):
+    pass

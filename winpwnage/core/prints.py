@@ -1,4 +1,5 @@
 from __future__ import print_function
+from winpwnage.core.error import WinPwnageError
 
 table = """
  Id:    Type:           Compatible:     Description:
@@ -29,6 +30,7 @@ def print_success(message):
 def print_error(message):
 	print(" [-] " + message)
 	Constant.output.append(("error", message))
+	raise WinPwnageError
 
 def print_info(message):
 	print(" [!] " + message)
